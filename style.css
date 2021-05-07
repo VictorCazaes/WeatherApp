@@ -5,24 +5,27 @@
   font-family: "Karla", sans-serif;
   outline: none;
 }
+html {
+  font-size: 93.75%;
+}
 main {
   height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
 }
 .search-block {
   display: flex;
-  height: 20vh;
+  height: 20%;
   align-items: center;
   justify-content: center;
 }
 .city-input {
-  width: 18rem;
+  width: 17rem;
   padding: 0.5rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
   font-style: oblique;
   opacity: 0.8;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border: none;
   border-radius: 1rem;
   box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
@@ -54,20 +57,99 @@ main {
 }
 .display-block {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 5rem;
-  height: 60vh;
-  width: 70vw;
+  flex-direction: column-reverse;
+  align-items: center;
+  min-height: 250px;
+  height: 70vh;
+  width: 80vw;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
-.display-city {
-  font-size: 1.8rem;
-  font-weight: 900;
+.side-block {
+  padding: 1rem;
 }
-
-.display-temperature {
+.display-city {
   font-size: 2rem;
+  font-weight: 500;
+}
+.display-weather {
+  margin: 1.25rem 0 0.25rem;
+}
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 0 0 1rem;
+}
+.weather-icon {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+.discription {
+  font-size: 1.3rem;
+}
+.display-temperature {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  font-size: 3.5rem;
+  margin-bottom: 1.8rem;
+}
+.temperature {
+  font-size: 7rem;
+}
+.temperature-unit {
+  padding-top: 1.2rem;
+}
+.display-feelslike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feels-like {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.unit {
+  font-size: 0.7rem;
+  margin-right: 1rem;
+}
+.minmax-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media (min-width: 850px) {
+  html {
+    font-size: 87.5%;
+  }
+  .search-block {
+    display: flex;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+  .city-input {
+    width: 23rem;
+  }
+  .display-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+    height: 45vh;
+    min-width: 600px;
+    width: 50vw;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  }
 }

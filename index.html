@@ -16,7 +16,7 @@
 <body>
     <main>
         <div class="search-block">
-            <input class="city-input" type="text" maxlength="25" placeholder="City name" value="calgary">
+            <input class="city-input" type="text" maxlength="34" placeholder="City name" value="Calgary, CA" required>
             <button class="search-button">
                 <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0V0z" fill="none" />
@@ -27,14 +27,15 @@
         </div>
         <div class="display-card">
             <div class="display-block">
-                <div class="left-side">
+                <div class="side-block">
                     <div class="display-city"></div>
+                    <div class="display-time"></div>
                     <div class="display-weather"></div>
                     <div class="display-humidity"></div>
-                    <div class="display-time"></div>
                 </div>
-                <div class="right-side">
+                <div class="side-block">
                     <div class="display-temperature"></div>
+                    <div class="display-feelslike"></div>
                     <div class="display-maxmin"></div>
                 </div>
             </div>
