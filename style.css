@@ -1,3 +1,9 @@
+:root {
+  --text: #333333;
+  --background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+  --shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  --cards: #ecf8fe;
+}
 * {
   padding: 0;
   margin: 0;
@@ -8,38 +14,48 @@
 html {
   font-size: 93.75%;
 }
-main {
+body {
+  color: var(--text);
+  background: var(--background);
   height: 100vh;
-  background-color: #ffffff;
 }
-.search-block {
+header {
+  height: 10vh;
   display: flex;
-  height: 20%;
   align-items: center;
   justify-content: center;
 }
+main {
+  height: 90vh;
+}
+.search-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+}
+.input-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
 .city-input {
-  width: 17rem;
-  padding: 0.5rem 1.2rem;
+  width: 40vw;
+  padding: 0.7rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
   font-style: oblique;
-  opacity: 0.8;
-  background-color: #ffffff;
+  background-color: var(--cards);
   border: none;
-  border-radius: 1rem;
-  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-}
-.city-input:focus {
-  opacity: 1;
+  border-radius: 1rem 0 0 1rem;
 }
 .search-button {
-  position: relative;
-  left: -2.2rem;
-  top: 0.12rem;
   border: none;
-  border-radius: 50%;
-  background-color: inherit;
+  border-radius: 0 1rem 1rem 0;
+  background-color: var(--cards);
+  padding: 0.5rem;
 }
 .search-icon {
   height: 1.4rem;
@@ -50,21 +66,22 @@ main {
   cursor: pointer;
 }
 .display-card {
-  height: 80vh;
+  height: 75vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .display-block {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   min-height: 250px;
   height: 70vh;
   width: 80vw;
-  padding: 2rem;
   border-radius: 1rem;
-  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  box-shadow: var(--shadow);
+  background-color: var(--cards);
 }
 .side-block {
   padding: 1rem;
@@ -125,31 +142,47 @@ main {
   font-size: 1rem;
   font-weight: 400;
 }
+footer {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 @media (min-width: 850px) {
   html {
     font-size: 87.5%;
   }
+  header {
+    height: 15vh;
+    font-size: 1.5rem;
+  }
+  main {
+    height: 70vh;
+  }
   .search-block {
-    display: flex;
-    height: 20%;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5rem;
+    height: 10vh;
   }
   .city-input {
     width: 23rem;
   }
+  .display-card {
+    height: 55vh;
+  }
   .display-block {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 5rem;
-    height: 45vh;
+    height: 25vh;
     min-width: 600px;
-    width: 50vw;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    width: 40vw;
+    padding: 1rem;
   }
 }

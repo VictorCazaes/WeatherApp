@@ -33,7 +33,7 @@ function displayContent(data) {
     const dayAndTime = calculeteTimeByTimezone(data.timezone);
     displayTime.innerHTML = dayAndTime;
 
-    displayCity.innerHTML = `${data.name}, ${data.sys.country}`;
+    displayCity.innerHTML = `${data.name}, ${data.sys.country} <img src="http://openweathermap.org/images/flags/${data.sys.country.toLowerCase()}.png" alt="flag">`;
 
     const mainWeather = `${setIcon(data.weather[0].icon)} ${data.weather[0].main}`;
     const discription = capitalizeFirstLetter(data.weather[0].description);
@@ -76,6 +76,7 @@ function getWeather(cityName) {
         })
         .then((data) => {
             displayContent(data);
+            console.log(data)
         })
         .catch((error) => {
             if (error == "TypeError: Cannot read property 'country' of undefined") {
