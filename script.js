@@ -70,13 +70,12 @@ function displayContent(data) {
 };
 
 function getWeather(cityName) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=f540f5c52c7d37e308a68408c3842237&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=f540f5c52c7d37e308a68408c3842237&units=metric`)
         .then(response => {
             return response.json();
         })
         .then((data) => {
             displayContent(data);
-            console.log(data)
         })
         .catch((error) => {
             if (error == "TypeError: Cannot read property 'country' of undefined") {
