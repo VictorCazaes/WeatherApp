@@ -188,4 +188,7 @@ a:hover {
     width: 40vw;
     padding: 1rem;
   }
+  footer {
+    margin: 0;
+  }
 }
