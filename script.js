@@ -24,7 +24,7 @@ function calculeteTimeByTimezone(offset) {
 
 function setIcon(weathericon) {
     let icon = '';
-    icon = `<img class="weather-icon" src="http://openweathermap.org/img/wn/${weathericon}@2x.png">`
+    icon = `<img class="weather-icon" src="https://openweathermap.org/img/wn/${weathericon}@2x.png">`
     return icon;
 };
 
@@ -33,7 +33,7 @@ function displayContent(data) {
     const dayAndTime = calculeteTimeByTimezone(data.timezone);
     displayTime.innerHTML = dayAndTime;
 
-    displayCity.innerHTML = `${data.name}, ${data.sys.country} <img src="http://openweathermap.org/images/flags/${data.sys.country.toLowerCase()}.png" alt="flag">`;
+    displayCity.innerHTML = `${data.name}, ${data.sys.country} <img src="https://openweathermap.org/images/flags/${data.sys.country.toLowerCase()}.png" alt="flag">`;
 
     const mainWeather = `${setIcon(data.weather[0].icon)} ${data.weather[0].main}`;
     const discription = capitalizeFirstLetter(data.weather[0].description);
