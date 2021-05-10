@@ -99,6 +99,7 @@ cityInput.addEventListener('keyup', (key) => {
     };
 });
 window.addEventListener('load', () => {
+    const lastCityFetched = localStorage.getItem('city');
     if (localStorage.getItem('city')) {
         getWeather(lastCityFetched);
     } else {
