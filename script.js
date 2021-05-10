@@ -99,11 +99,10 @@ cityInput.addEventListener('keyup', (key) => {
     };
 });
 window.addEventListener('load', () => {
-    let lastCityFetched = localStorage.getItem('city');
-    if (lastCityFetched == 'null') {
-        lastCityFetched = 'Calgary, CA';
+    if (localStorage.getItem('city')) {
         getWeather(lastCityFetched);
     } else {
-        getWeather(lastCityFetched);
+        localStorage.setItem('city', 'Calgary, CA')
+        getWeather('Calgary, CA');
     };
 });
