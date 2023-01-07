@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import githubLogo from "./assets/github.png";
 import { HourlyForecastCard } from "./components/HourlyForecastCard";
 import { SearchBar } from "./components/SearchBar";
 import { WeatherCard } from "./components/WeatherCard";
@@ -88,16 +89,12 @@ export function App() {
 						  })
 				}`,
 			},
-			{
-				title: "GitHub",
-				value: "Link",
-			},
 		];
 		setWeatherDetailsData({ detail: detail });
 	}, [weatherData]);
 
 	return (
-		<div className="min-w-fit w-screen h-screen py-4 flex flex-col items-center gap-2 bg-gradient-to-b from-sky-300 via-sky-600 to-sky-800 lg:px-1">
+		<div className="min-w-fit w-screen h-screen pt-4 pb-8 flex flex-col items-center gap-2 bg-gradient-to-b from-sky-300 via-sky-600 to-sky-800 lg:px-1">
 			<div className="h-full w-full overflow-y-scroll select-none">
 				<SearchBar searchCity={searchCity} />
 				<WeatherCard data={weatherData} />
@@ -112,6 +109,19 @@ export function App() {
 							/>
 						);
 					})}
+					<div className="py-3 px-5 h-24 flex flex-col gap-2 bg-sky-900 rounded bg-opacity-20 text-white">
+						<div className="text-sm text-slate-200 sm:text-lg xl:text-base">
+							GitHub
+						</div>
+						<div className="flex justify-center">
+							<a
+								target="_blank"
+								href="https://github.com/VictorCazaes/WeatherApp/"
+							>
+								<img src={githubLogo} alt="github" className="w-8 invert" />
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
