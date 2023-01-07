@@ -35,6 +35,7 @@ export function App() {
 			searchCity(localStorageCity);
 		} else {
 			localStorage.setItem("City", "calgary");
+			searchCity("calgary");
 		}
 	}, []);
 
