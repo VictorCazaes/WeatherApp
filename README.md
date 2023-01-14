@@ -2,6 +2,9 @@
 
 A weather app built with Vite, TypeScript, React.js, Tailwind CSS, and OpenWeatherMap API.
 
+## Live Demo
+You can check out a live version of this app at https://weather-app-victorcazaes.vercel.app/.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -33,9 +36,6 @@ npm run dev
 - [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
 - [OpenWeatherMap API](https://openweathermap.org/api) - An API for weather data
-
-## Live Demo
-You can check out a live version of this app at https://weather-app-victorcazaes.vercel.app/.
 
 ## Development
 To deploy this app, you will need to build the production version of the app by running the following command:
