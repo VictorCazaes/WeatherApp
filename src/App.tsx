@@ -14,7 +14,7 @@ export function App() {
 		useState<WeatherDetailsData | null>(null);
 
 	function searchCity(city: string) {
-		const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+		const apiKey: string = import.meta.env.VITE_WEATHER_API_KEY;
 		const instance = axios.create({
 			baseURL: "https://api.openweathermap.org/data/2.5/",
 		});

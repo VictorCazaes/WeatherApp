@@ -7,12 +7,19 @@ interface SearchBarProps {
 export function SearchBar({ searchCity }: SearchBarProps) {
 	const [searchCityValue, setSearchCityValue] = useState("");
 
+	function validateCityInput(city: string): boolean {
+		const regex = /^[a-zA-Z\s]+(,)?(\s?[a-zA-Z]{2})?$/i;
+		return regex.test(city);
+	}
+
 	function handleSearchCity() {
-		const regex = /^[a-zA-Z ]+(,[a-zA-Z]{2})?$/;
-		if (regex.test(searchCityValue)) {
+		const isValid = validateCityInput(searchCityValue);
+		if (isValid) {
 			searchCity(searchCityValue);
 		} else {
-			alert(`Insert a valid city name like: "New York" or "New York, US"`);
+			alert(
+				`To make it more precise put the city's name, comma, 2-letter country code (ISO3166). You will get the proper city by specifying the country. The order is important - the first is city name then comma then country. Example - London, GB or New York, US.`
+			);
 		}
 	}
 
