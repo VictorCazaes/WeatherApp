@@ -20,8 +20,10 @@ export function WeatherCard({ data }: DataProps) {
 		<div className="w-full py-3 flex flex-col items-center justify-center text-white">
 			<div className="w-full flex flex-col items-center justify-between gap-4">
 				<div>
-					<div className="flex items-center justify-center gap-3 text-3xl font-semibold sm:text-5xl xl:text-3xl">
-						{data?.name}
+					<div className="flex items-center justify-center gap-3">
+						<div className="text-3xl font-semibold sm:text-5xl xl:text-3xl">
+							{data?.name}
+						</div>
 						<img
 							src={`https://openweathermap.org/images/flags/${
 								data == null ? "" : data.sys.country.toLowerCase()
